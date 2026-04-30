@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shopify B2B EMEA Partner Update 2026</title>
+<title>Shopify B2B — Partner Update 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -13,21 +13,22 @@ body {
   font-family: 'Inter', -apple-system, sans-serif;
   background: #080c10;
   color: #fff;
-  overflow-y: auto;
+  overflow: hidden;
   width: 100vw;
-  height: auto;
+  height: 100vh;
 }
 
 /* ── SLIDE BASE ── */
 .slide {
-  display: flex;
+  display: none;
   width: 100vw;
-  min-height: 100vh;
-  position: relative;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
+.slide.active { display: flex; }
 
 /* Entry animation */
 @keyframes enter {
@@ -460,21 +461,29 @@ h2 {
 .mp-lbl { transition: opacity 0.55s ease; }
 #slide-0 { background: #0a0f1c; }
 
-/* ── STATIC VERSION: show all animated content ── */
-#slide-1, #slide-2 { display: none !important; }
-#counter, #progress { display: none !important; }
-#s2-chat, #s2-rec,
-#s6-c1, #s6-c2, #s6-c3,
-#s9-arrow, #s9-right,
-#s11-c1, #s11-c2, #s11-c3,
-#s12-grid,
-#s18-support,
-#s19-c1, #s19-c2, #s19-c3 {
-  opacity: 1 !important;
-  transition: none !important;
+/* ── Static external version overrides ────────────────────────────── */
+.slide {
+  display: block !important;
+  height: auto !important;
+  min-height: 100vh;
+  page-break-after: always;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-.s5-acq-cell, .s5-acc-cell { opacity: 1 !important; }
-.anim { animation: none !important; opacity: 1 !important; }
+.slide.active { display: block !important; }
+.anim { animation: none !important; opacity: 1 !important; transform: none !important; }
+/* Force every animated card / element visible */
+[id^="s2-"], [id^="s5-"], [id^="s6-"], [id^="s9-"], [id^="s11-"],
+[id^="s12-"], [id^="s18-"], [id^="s19-"],
+.s5-acq-cell, .s5-acc-cell {
+  opacity: 1 !important;
+}
+/* Hide the opening title (slide-0) and the interactive map (slide-1)
+   plus the duplicate title (slide-2) — these are presenter-only */
+#slide-0, #slide-1, #slide-2 { display: none !important; }
+/* Body needs to scroll */
+html, body { overflow-y: auto !important; height: auto !important; }
+body { background: #0f1729; }
+
 </style>
 </head>
 <body>
@@ -1403,33 +1412,272 @@ h2 {
   <div class="sec-title anim">Launching on B2B</div>
 </div>
 
-<!-- SECTION 04 PLACEHOLDER -->
+<!-- ─────────────────────────────────────────
+     SECTION 04 · ANNA — Slide 1: Value framing
+───────────────────────────────────────── -->
 <div class="slide bg-dark pad" id="slide-21">
   <div class="eyebrow anim">Section 04 · Launching on B2B</div>
-  <h2 class="anim">Content coming soon</h2>
-  <div class="ph anim">Placeholder — launch learnings slides go here</div>
+  <h2 class="anim">How the strongest B2B go-lives think about <span class="accent">value</span></h2>
+  <div class="cols-2 anim" style="margin-top:24px;align-items:start;gap:32px;">
+    <ul class="blist">
+      <li><strong>Reduce manual work</strong><span class="blist-sub"> — fewer phone, email, and spreadsheet orders; reps focus on exceptions</span></li>
+      <li><strong>More self-serve ordering</strong><span class="blist-sub"> — buyers place orders online instead of calling or emailing in</span></li>
+      <li><strong>Catalog online</strong><span class="blist-sub"> — searchable SKUs and assortments, not PDFs</span></li>
+      <li><strong>D2C-like B2B UX</strong><span class="blist-sub"> — fast, on-brand storefront flows; not a "portal afterthought"</span></li>
+      <li><strong>Order history &amp; reorder</strong><span class="blist-sub"> — past orders act as templates for repeat buyers</span></li>
+      <li><strong>Pay in Checkout</strong><span class="blist-sub"> — cards, vaulted methods, clear paid/unpaid state; fewer surprises</span></li>
+    </ul>
+    <div class="card">
+      <h3>Key tools you build with</h3>
+      <ul class="blist" style="font-size:clamp(13px,1.4vw,16px);">
+        <li>Companies &amp; locations</li>
+        <li>B2B catalogs &amp; price lists</li>
+        <li>Markets for international</li>
+        <li>Flow for automation</li>
+        <li>Sidekick &amp; Magic for AI</li>
+        <li>Functions &amp; UI extensions</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────────────
+     SECTION 04 · ANNA — Slide 2: Four launch moves
+───────────────────────────────────────── -->
+<div class="slide bg-dark pad" id="slide-22">
+  <div class="eyebrow anim">Section 04 · Launching on B2B</div>
+  <h2 class="anim">Four launch moves — <span class="accent">what moves the needle</span></h2>
+  <div class="cols-2 anim" style="margin-top:24px;gap:20px;">
+    <div class="card">
+      <h3>🔌 Integrations-first</h3>
+      <p style="font-size:clamp(14px,1.5vw,18px);line-height:1.55;opacity:.85;">#1 technical risk: slips and churn. Model early, integrate, own cutover.</p>
+      <div style="margin-top:12px;font-size:clamp(12px,1.2vw,14px);color:#47d7a0;font-weight:600;">→ Involve us early on integration</div>
+    </div>
+    <div class="card">
+      <h3>🔥 Change management</h3>
+      <p style="font-size:clamp(14px,1.5vw,18px);line-height:1.55;opacity:.85;">Weak B2B or a big-bang? Plan onboarding — adoption + reorders takes time.</p>
+      <div style="margin-top:12px;font-size:clamp(12px,1.2vw,14px);color:#47d7a0;font-weight:600;">→ Phased rollouts, comms &amp; training</div>
+    </div>
+    <div class="card">
+      <h3>👻 Avoid silent quitting</h3>
+      <p style="font-size:clamp(14px,1.5vw,18px);line-height:1.55;opacity:.85;">Payments pivot or scope drift mid-build? Loop us in — we advise or escalate.</p>
+      <div style="margin-top:12px;font-size:clamp(12px,1.2vw,14px);color:#47d7a0;font-weight:600;">→ Tell us before scope drifts</div>
+    </div>
+    <div class="card">
+      <h3>💳 Payments &amp; order state</h3>
+      <p style="font-size:clamp(14px,1.5vw,18px);line-height:1.55;opacity:.85;">Orders paid outside Shopify often never get marked paid — bad UX and VPF doesn't trigger.</p>
+      <div style="margin-top:12px;font-size:clamp(12px,1.2vw,14px);color:#47d7a0;font-weight:600;">→ Sync paid status + VPF from day one</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────────────
+     SECTION 04 · ANNA — Slide 3: Deliverables
+───────────────────────────────────────── -->
+<div class="slide bg-dark pad-s" id="slide-23" style="justify-content:flex-start;padding-top:48px;">
+  <div class="eyebrow anim">Section 04 · Launching on B2B</div>
+  <h2 class="anim" style="margin-bottom:20px;">Deliverables behind a Shopify B2B project</h2>
+  <div class="anim" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:4px;">
+    <div class="card" style="padding:18px 20px;">
+      <h3>Integrations</h3>
+      <ul class="blist" style="font-size:clamp(12px,1.25vw,14px);">
+        <li>ERP / Finance</li>
+        <li>PIM / DAM</li>
+        <li>OMS / WMS</li>
+        <li>EDI / Punchout</li>
+        <li>SSO / IdP for buyers</li>
+      </ul>
+    </div>
+    <div class="card" style="padding:18px 20px;">
+      <h3>Channel &amp; storefront</h3>
+      <ul class="blist" style="font-size:clamp(12px,1.25vw,14px);">
+        <li>Blended vs dedicated B2B</li>
+        <li>Headless vs theme</li>
+        <li>Markets, languages, currencies</li>
+        <li>Catalogs for B2B &amp; D2C</li>
+        <li>SEO &amp; search</li>
+      </ul>
+    </div>
+    <div class="card" style="padding:18px 20px;">
+      <h3>B2B config</h3>
+      <ul class="blist" style="font-size:clamp(12px,1.25vw,14px);">
+        <li>Companies, locations, buyers</li>
+        <li>Payment terms &amp; checkout</li>
+        <li>Taxes &amp; shipping profiles</li>
+        <li>Draft orders &amp; Flow</li>
+        <li>Discounts &amp; price lists</li>
+      </ul>
+    </div>
+    <div class="card" style="padding:18px 20px;">
+      <h3>Custom builds</h3>
+      <ul class="blist" style="font-size:clamp(12px,1.25vw,14px);">
+        <li>Checkout Functions</li>
+        <li>Customer account UI extensions</li>
+        <li>Cart transforms</li>
+        <li>Custom carrier service rates</li>
+        <li>Custom pixels &amp; metafields</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────────────
+     SECTION 04 · ANNA — Slide 4: Use cases
+───────────────────────────────────────── -->
+<div class="slide bg-dark pad" id="slide-24">
+  <div class="eyebrow anim">Section 04 · Launching on B2B</div>
+  <h2 class="anim">Common B2B <span class="accent">use cases</span></h2>
+  <div class="cols-2 anim" style="margin-top:20px;gap:20px;align-items:start;">
+    <div>
+      <div style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#47d7a0;margin-bottom:14px;">Possible with customisation</div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="card" style="padding:16px 20px;">
+          <h3>📋 Quotes</h3>
+          <p style="font-size:clamp(13px,1.4vw,16px);line-height:1.5;opacity:.8;">Q2O, approvals, draft-order handoff. Native draft orders + apps for rules/approvals.</p>
+        </div>
+        <div class="card" style="padding:16px 20px;">
+          <h3>📦 Seasonal preorders</h3>
+          <p style="font-size:clamp(13px,1.4vw,16px);line-height:1.5;opacity:.8;">Pre-book drops, delivery windows, allocations. Metafields, Liquid, and line item properties.</p>
+        </div>
+        <div class="card" style="padding:16px 20px;">
+          <h3>👤 Sales rep impersonation</h3>
+          <p style="font-size:clamp(13px,1.4vw,16px);line-height:1.5;opacity:.8;">Order as the buyer. Draft orders or B2B Order Agent app.</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:rgba(71,215,160,0.45);margin-bottom:14px;">Often needing more customisation</div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="card" style="padding:16px 20px;border-color:rgba(255,255,255,0.06);">
+          <h3 style="color:rgba(71,215,160,0.55);">🏷️ White-label &amp; multi-brand</h3>
+          <p style="font-size:clamp(13px,1.4vw,16px);line-height:1.5;opacity:.7;">Per-buyer theming, logos, copy. Often shared backend, different frontends.</p>
+        </div>
+        <div class="card" style="padding:16px 20px;border-color:rgba(255,255,255,0.06);">
+          <h3 style="color:rgba(71,215,160,0.55);">⚙️ Product customisation</h3>
+          <p style="font-size:clamp(13px,1.4vw,16px);line-height:1.5;opacity:.7;">Configurators, made-to-order SKUs, spec-driven line items.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ═══════════════════════════════════════════
-     16 · SECTION 05 DIVIDER
+     SECTION 05 DIVIDER
 ═══════════════════════════════════════════ -->
-<div class="slide bg-dark pad" id="slide-22">
+<div class="slide bg-dark pad" id="slide-25">
   <div class="sec-num anim">05</div>
   <div class="sec-title anim">B2B Product Direction</div>
   <div class="sec-sub anim">What's coming and what to watch</div>
 </div>
 
-<!-- SECTION 05 PLACEHOLDER -->
-<div class="slide bg-dark pad" id="slide-23">
+<!-- ─────────────────────────────────────────
+     SECTION 05 · ANNA — Slide 5: Gaps
+───────────────────────────────────────── -->
+<div class="slide bg-dark pad" id="slide-26">
   <div class="eyebrow anim">Section 05 · B2B Product Direction</div>
-  <h2 class="anim">Content coming soon</h2>
-  <div class="ph anim">Placeholder — product direction slides go here</div>
+  <h2 class="anim">Where we still need <span class="accent">better solutions</span></h2>
+  <div class="cols-2 anim" style="margin-top:32px;gap:28px;align-items:start;">
+    <div class="card" style="border-color:rgba(245,208,100,0.35);background:rgba(245,190,80,0.05);">
+      <h3 style="color:#f5d080;">1 — B2B subscriptions</h3>
+      <p style="font-size:clamp(15px,1.7vw,20px);line-height:1.6;opacity:.85;margin-top:8px;">Contract terms, net invoicing, and reorders don't map neatly to consumer-style selling plans. Apps and ops models vary in maturity.</p>
+    </div>
+    <div class="card" style="border-color:rgba(245,208,100,0.35);background:rgba(245,190,80,0.05);">
+      <h3 style="color:#f5d080;">2 — Multi-destination in one checkout</h3>
+      <p style="font-size:clamp(15px,1.7vw,20px);line-height:1.6;opacity:.85;margin-top:8px;">Ship parts of one order to different company locations in a single B2B checkout. Native checkout currently assumes one ship-to per order.</p>
+    </div>
+  </div>
+  <div class="callout anim" style="margin-top:28px;font-size:clamp(14px,1.5vw,17px);">Still worth customisation, but no widely proven out-of-the-box story today — expect trade-offs, workarounds, or ERP-led flows. Position with explicit risks, not as "Shopify can't."</div>
+</div>
+
+<!-- ─────────────────────────────────────────
+     SECTION 05 · ANNA — Slide 6: Roadmap
+───────────────────────────────────────── -->
+<div class="slide bg-dark pad-s" id="slide-27" style="justify-content:flex-start;padding-top:48px;">
+  <div class="eyebrow anim">Section 05 · B2B Product Direction</div>
+  <h2 class="anim" style="margin-bottom:6px;">Where B2B investment is <span class="accent">heading</span></h2>
+  <p class="anim" style="font-size:clamp(12px,1.3vw,15px);opacity:.4;margin-bottom:20px;">Directional only — not a commitment</p>
+  <div class="anim" style="display:flex;flex-direction:column;gap:10px;">
+    <div style="display:grid;grid-template-columns:1fr 100px 120px;gap:0;background:rgba(71,215,160,0.06);border:1px solid rgba(71,215,160,0.15);border-radius:12px;overflow:hidden;">
+      <div style="padding:14px 20px;font-size:clamp(13px,1.4vw,16px);font-weight:600;">B2B features across plans <span class="blist-sub">— Basic, Grow, Advanced now have native B2B; not just Plus</span></div>
+      <div style="padding:14px 12px;font-size:11px;font-weight:700;color:#47d7a0;letter-spacing:.1em;text-transform:uppercase;border-left:1px solid rgba(71,215,160,0.15);display:flex;align-items:center;">Now</div>
+      <div style="padding:14px 12px;font-size:11px;opacity:.45;border-left:1px solid rgba(71,215,160,0.15);display:flex;align-items:center;">Live</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 100px 120px;gap:0;background:rgba(71,215,160,0.06);border:1px solid rgba(71,215,160,0.15);border-radius:12px;overflow:hidden;">
+      <div style="padding:14px 20px;font-size:clamp(13px,1.4vw,16px);font-weight:600;">Multiple legal entities in a single store <span class="blist-sub">— one Shopify presence, clearer governance for groups</span></div>
+      <div style="padding:14px 12px;font-size:11px;font-weight:700;color:#47d7a0;letter-spacing:.1em;text-transform:uppercase;border-left:1px solid rgba(71,215,160,0.15);display:flex;align-items:center;">Now</div>
+      <div style="padding:14px 12px;font-size:11px;opacity:.45;border-left:1px solid rgba(71,215,160,0.15);display:flex;align-items:center;">Governance</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 100px 120px;gap:0;background:rgba(71,215,160,0.06);border:1px solid rgba(71,215,160,0.15);border-radius:12px;overflow:hidden;">
+      <div style="padding:14px 20px;font-size:clamp(13px,1.4vw,16px);font-weight:600;">Payment requests per fulfilment <span class="blist-sub">— request payment per shipment for mixed lead-time orders</span></div>
+      <div style="padding:14px 12px;font-size:11px;font-weight:700;color:#47d7a0;letter-spacing:.1em;text-transform:uppercase;border-left:1px solid rgba(71,215,160,0.15);display:flex;align-items:center;">Now</div>
+      <div style="padding:14px 12px;font-size:11px;opacity:.45;border-left:1px solid rgba(71,215,160,0.15);display:flex;align-items:center;">Payments</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 100px 120px;gap:0;background:rgba(71,215,160,0.06);border:1px solid rgba(71,215,160,0.15);border-radius:12px;overflow:hidden;">
+      <div style="padding:14px 20px;font-size:clamp(13px,1.4vw,16px);font-weight:600;">Cart &amp; checkout validation: billing address + PO number <span class="blist-sub">— enforce rules without client-side hacks</span></div>
+      <div style="padding:14px 12px;font-size:11px;font-weight:700;color:#47d7a0;letter-spacing:.1em;text-transform:uppercase;border-left:1px solid rgba(71,215,160,0.15);display:flex;align-items:center;">Now</div>
+      <div style="padding:14px 12px;font-size:11px;opacity:.45;border-left:1px solid rgba(71,215,160,0.15);display:flex;align-items:center;">Functions</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 100px 120px;gap:0;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;">
+      <div style="padding:14px 20px;font-size:clamp(13px,1.4vw,16px);font-weight:600;">Variant-level publishing <span class="blist-sub">— finer control over which SKU variants appear in which B2B catalog</span></div>
+      <div style="padding:14px 12px;font-size:11px;font-weight:700;color:rgba(71,215,160,0.45);letter-spacing:.1em;text-transform:uppercase;border-left:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;">Soon</div>
+      <div style="padding:14px 12px;font-size:11px;opacity:.35;border-left:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;">Catalogs</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 100px 120px;gap:0;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;">
+      <div style="padding:14px 20px;font-size:clamp(13px,1.4vw,16px);font-weight:600;">Discounts by market <span class="blist-sub">— align promotions with Markets pricing and regional GTM</span></div>
+      <div style="padding:14px 12px;font-size:11px;font-weight:700;color:rgba(71,215,160,0.45);letter-spacing:.1em;text-transform:uppercase;border-left:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;">Soon</div>
+      <div style="padding:14px 12px;font-size:11px;opacity:.35;border-left:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;">Markets</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────────────
+     SECTION 05 · ANNA — Slide 7: Network
+───────────────────────────────────────── -->
+<div class="slide bg-dark pad" id="slide-28">
+  <div class="eyebrow anim">Section 05 · B2B Product Direction</div>
+  <h2 class="anim">B2B as a <span class="accent">network</span></h2>
+  <div class="cols-2 anim" style="margin-top:28px;gap:32px;align-items:start;">
+    <div>
+      <p style="font-size:clamp(15px,1.7vw,21px);line-height:1.65;opacity:.85;margin-bottom:20px;">When orders, buyer data, and relationships stay on Shopify, the hub merchant and downstream buyer orgs can compound — beyond email and spreadsheets alone.</p>
+      <div class="callout">1 net-new B2B merchant brings their entire value chain — suppliers, buyers, subsidiaries — potentially onto the platform.</div>
+    </div>
+    <div class="card">
+      <h3>The compounding logic</h3>
+      <ul class="blist" style="font-size:clamp(13px,1.5vw,17px);">
+        <li><strong>Hub merchant</strong><span class="blist-sub"> — your B2B client acts as the anchor</span></li>
+        <li><strong>Buyer orgs</strong><span class="blist-sub"> — distributors, branches, subsidiaries; each a node</span></li>
+        <li><strong>Data on-platform</strong><span class="blist-sub"> — orders, reorders, and relationships compound vs. email</span></li>
+        <li><strong>Collective</strong><span class="blist-sub"> — dropship via another merchant's store; extend inventory</span></li>
+        <li><strong>Investment signal</strong><span class="blist-sub"> — preorders and seasonal allocation workflows top-of-mind from Q3</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────────────
+     SECTION 05 · ANNA — Slide 8: Resources
+───────────────────────────────────────── -->
+<div class="slide bg-dark pad" id="slide-29">
+  <div class="eyebrow anim">Partner Resources</div>
+  <h2 class="anim">Where to go <span class="accent">next</span></h2>
+  <div class="cols-2 anim" style="margin-top:32px;gap:28px;align-items:start;">
+    <div class="card">
+      <h3>Partner Resource Hub</h3>
+      <p style="font-size:clamp(14px,1.6vw,19px);line-height:1.6;opacity:.85;margin-bottom:16px;">Anna's hub — B2B implementation guides, use case playbooks, and partner-specific documentation.</p>
+      <div style="font-size:clamp(13px,1.4vw,16px);color:#47d7a0;font-weight:600;">annafy2024.github.io/partner-resource-hub</div>
+    </div>
+    <div class="card">
+      <h3>Solution Validation Form</h3>
+      <p style="font-size:clamp(14px,1.6vw,19px);line-height:1.6;opacity:.85;margin-bottom:16px;">Submit your project details before go-live — our SEs review for complexity and flag risks early.</p>
+      <div style="font-size:clamp(13px,1.4vw,16px);color:#47d7a0;font-weight:600;">forms.gle/A5Moy5ZKACr1q6NQ8</div>
+    </div>
+  </div>
 </div>
 
 <!-- ═══════════════════════════════════════════
-     18 · CLOSING — WHY THIS IS CRITICAL
+     CLOSING — WHY THIS IS CRITICAL
 ═══════════════════════════════════════════ -->
-<div class="slide bg-green pad" id="slide-24">
+<div class="slide bg-green pad" id="slide-30">
   <div class="eyebrow anim">Partner Alignment</div>
   <h1 class="anim">Why this is critical</h1>
   <div class="divider anim"></div>
@@ -1450,10 +1698,7 @@ h2 {
 <!-- ── UI CHROME ── -->
 <div class="progress" id="progress"></div>
 <div class="counter" id="counter">1 / 18</div>
-<div class="nav">
-  <button onclick="navigate(-1)">&#8592;</button>
-  <button onclick="navigate(1)">&#8594;</button>
-</div>
+
 
 
 
