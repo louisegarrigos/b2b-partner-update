@@ -4488,6 +4488,37 @@ body { background: #0d1117; }
   transform: none !important;
 }
 
+/* Anna slide 4 (Common B2B use cases): show all detail panels stacked */
+.anna-slide .use-cases-slide .uc-detail-stack {
+  display: block !important;
+  margin-top: 1.25rem !important;
+}
+.anna-slide .use-cases-slide .uc-detail-panel,
+.anna-slide .use-cases-slide .uc-detail-panel.uc-detail-panel--media {
+  display: block !important;
+  margin-bottom: 2rem !important;
+  padding-top: 1.25rem !important;
+  border-top: 1px solid rgba(255,255,255,0.08) !important;
+}
+.anna-slide .use-cases-slide .uc-detail-panel.uc-detail-panel--media {
+  flex-direction: column !important;
+}
+
+/* Anna slide 3 (Deliverables): show final state with all 6 base columns + ERP/PIM/OMS satellites */
+.anna-slide section.deliverables-slide .deliv-hub-cluster,
+.anna-slide section.deliverables-slide .deliv-sat,
+.anna-slide section.deliverables-slide .deliv-sat--erp,
+.anna-slide section.deliverables-slide .deliv-sat--optional,
+.anna-slide section.deliverables-slide .deliv-sat-stack--optional,
+.anna-slide section.deliverables-slide .deliv-spokes-svg,
+.anna-slide section.deliverables-slide .deliv-hub-actions {
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+  filter: none !important;
+  visibility: visible !important;
+}
+
 #slide-1, #slide-2 { display: none !important; }
 
 </style>
@@ -5436,12 +5467,12 @@ body { background: #0d1117; }
         <div class="shopify-inner">
           <h2 class="s-reveal">How the strongest B2B go-lives think about <span style="color: var(--p-lime);">value</span></h2>
           <ul class="entry-bullets">
-            <li><strong>Reduce manual work</strong> â fewer phone, email, and spreadsheet orders; reps focus on exceptions.</li>
-            <li><strong>More self-serve ordering</strong> â buyers place (most) orders online instead of MOTO.</li>
-            <li><strong>Catalog online</strong> â searchable SKUs and assortments.</li>
-            <li><strong>D2C-like B2B UX</strong> â fast, on-brand storefront flows; not a âportal afterthought.â</li>
-            <li><strong>Order history &amp; reorder</strong> â keep order history, past orders act as templates.</li>
-            <li><strong>Pay in Checkout</strong> â cards, vaulted methods, clear paid / unpaid state; fewer surprises.</li>
+            <li><strong>Reduce manual work</strong> — fewer phone, email, and spreadsheet orders; reps focus on exceptions.</li>
+            <li><strong>More self-serve ordering</strong> — buyers place (most) orders online instead of MOTO.</li>
+            <li><strong>Catalog online</strong> — searchable SKUs and assortments.</li>
+            <li><strong>D2C-like B2B UX</strong> — fast, on-brand storefront flows; not a “portal afterthought.”</li>
+            <li><strong>Order history &amp; reorder</strong> — keep order history, past orders act as templates.</li>
+            <li><strong>Pay in Checkout</strong> — cards, vaulted methods, clear paid / unpaid state; fewer surprises.</li>
           </ul>
 
           <div class="entry-tools">
@@ -5483,63 +5514,63 @@ body { background: #0d1117; }
 <div class="slide anna-slide" id="anna-2">
   <section class="slide anim-on cta-slide" data-slide>
         <div class="shopify-inner cta-ref-inner">
-          <p class="cta-ref-kicker s-reveal">â merchant success</p>
+          <p class="cta-ref-kicker s-reveal">— merchant success</p>
           <h1 class="cta-ref-h1 s-reveal">
-            <span class="cta-ref-h1-line">Four launch moves â</span>
+            <span class="cta-ref-h1-line">Four launch moves —</span>
             <span class="cta-ref-h1-accent">what moves the needle for launch success</span>
           </h1>
 
           <div class="cta-ref-grid">
             <article class="cta-ref-card s-reveal">
-              <div class="cta-ref-icon" aria-hidden="true">ð</div>
+              <div class="cta-ref-icon" aria-hidden="true">🔗</div>
               <h2>Integrations-first approaches</h2>
               <p>
                 #1 <strong>technical</strong> risk: slips and <strong>churn</strong>. <strong>Model early</strong>, <strong>integrate</strong>, <strong>own cutover</strong>.
               </p>
-              <div class="cta-ref-badge"><span aria-hidden="true">â¡</span> Involve us early on integration</div>
+              <div class="cta-ref-badge"><span aria-hidden="true">⚡</span> Involve us early on integration</div>
             </article>
 
             <article class="cta-ref-card s-reveal">
-              <div class="cta-ref-icon" aria-hidden="true">ð¥</div>
+              <div class="cta-ref-icon" aria-hidden="true">👥</div>
               <h2>Change management strategy</h2>
               <p>
-                Weak B2B or a <strong>big-bang</strong>? <strong>Plan onboarding</strong> â adoption + reorders.
+                Weak B2B or a <strong>big-bang</strong>? <strong>Plan onboarding</strong> — adoption + reorders.
               </p>
-              <div class="cta-ref-badge"><span aria-hidden="true">â¡</span> Phased rollouts, comms &amp; training</div>
+              <div class="cta-ref-badge"><span aria-hidden="true">⚡</span> Phased rollouts, comms &amp; training</div>
             </article>
 
             <article class="cta-ref-card s-reveal">
-              <div class="cta-ref-icon" aria-hidden="true">ð</div>
+              <div class="cta-ref-icon" aria-hidden="true">🔁</div>
               <h2>Avoid silent quitting</h2>
               <p>
-                <strong>Payments</strong> / <strong>MVP</strong> pivot mid-build? <strong>Loop us in</strong> â advise or <strong>escalate</strong>.
+                <strong>Payments</strong> / <strong>MVP</strong> pivot mid-build? <strong>Loop us in</strong> — advise or <strong>escalate</strong>.
               </p>
-              <div class="cta-ref-badge"><span aria-hidden="true">â¡</span> Loop us in before scope drifts</div>
+              <div class="cta-ref-badge"><span aria-hidden="true">⚡</span> Loop us in before scope drifts</div>
             </article>
 
             <article class="cta-ref-card s-reveal">
-              <div class="cta-ref-icon" aria-hidden="true">ð³</div>
+              <div class="cta-ref-icon" aria-hidden="true">💳</div>
               <h2>Payments &amp; order state</h2>
               <p>
-                Orders <strong>paid outside Shopify</strong> often never get <strong>marked as paid</strong> in Shopify â that creates a <strong>bad buyer and ops UX</strong> and means <strong>VPF</strong> does not charge as expected.
+                Orders <strong>paid outside Shopify</strong> often never get <strong>marked as paid</strong> in Shopify — that creates a <strong>bad buyer and ops UX</strong> and means <strong>VPF</strong> does not charge as expected.
               </p>
-              <div class="cta-ref-badge"><span aria-hidden="true">â¡</span> Sync paid status + VPF expectations</div>
+              <div class="cta-ref-badge"><span aria-hidden="true">⚡</span> Sync paid status + VPF expectations</div>
             </article>
           </div>
 
           <div class="presenter-notes-store" hidden>
             <h4>Frame</h4>
-            <p>Quick CTA â merchant success: four practical moves partners and merchants should align on before and during go-live.</p>
+            <p>Quick CTA — merchant success: four practical moves partners and merchants should align on before and during go-live.</p>
             <h4>1) ERP / integration capability</h4>
-            <p>We need partners who are experienced in ERP integrations. Lack of skill/experience here is the most common technical reason merchants launch later than planned â and worst case can even lead to churn.</p>
+            <p>We need partners who are experienced in ERP integrations. Lack of skill/experience here is the most common technical reason merchants launch later than planned — and worst case can even lead to churn.</p>
             <h4>2) Buyer onboarding</h4>
-            <p>Merchants also need a strong B2B buyer onboarding strategy. If they donât have an online B2B presence today, or they donât want to onboard everyone at once (big bang), this requires planning and impacts overall success.</p>
+            <p>Merchants also need a strong B2B buyer onboarding strategy. If they don’t have an online B2B presence today, or they don’t want to onboard everyone at once (big bang), this requires planning and impacts overall success.</p>
             <h4>3) Avoid silent quitting</h4>
             <p>If we discussed Shopify Payments or a number of target MVP markets for launch, and you/merchant consider alternatives due to challenges or objections, please keep us in the loop. We can help advise on options, take internal actions you may not be aware of, and/or escalate feedback internally.</p>
             <h4>Marked as paid + VPF</h4>
-            <p>When payment happens outside Shopify (ERP, wire, offline), integrations sometimes create the order but never flip <strong>payment status</strong> in Shopify. That hurts buyer trust and internal ops, and <strong>VPF</strong> may not apply as expected â align early on what must sync.</p>
+            <p>When payment happens outside Shopify (ERP, wire, offline), integrations sometimes create the order but never flip <strong>payment status</strong> in Shopify. That hurts buyer trust and internal ops, and <strong>VPF</strong> may not apply as expected — align early on what must sync.</p>
             <h4>Close</h4>
-            <p>Involve us if you need help building these strategies â weâre here to help.</p>
+            <p>Involve us if you need help building these strategies — we’re here to help.</p>
           </div>
         </div>
       </section>
@@ -5575,7 +5606,7 @@ body { background: #0d1117; }
                     <div class="deliv-col-head">PIM / DAM</div>
                     <div class="deliv-col-body">
                       <div class="deliv-block">Attributes &amp; enrichment</div>
-                      <div class="deliv-block">Digital assets â catalog</div>
+                      <div class="deliv-block">Digital assets → catalog</div>
                     </div>
                   </div>
                 </div>
@@ -5610,7 +5641,7 @@ body { background: #0d1117; }
 
               <div class="deliv-hub-cluster" id="delivHubCluster">
                 <div class="deliv-middleware-frame" id="delivMiddlewareFrame"></div>
-                <span class="deliv-mw-label">â middleware / integration â</span>
+                <span class="deliv-mw-label">— middleware / integration —</span>
                 <div class="deliv-hub-core" id="delivHubCore">
                 <div class="deliv-hub-actions">
                   <button type="button" class="deliv-hub-btn" id="delivBtnCustomisations" aria-expanded="false" aria-controls="delivPanelCustomisations">Customisations</button>
@@ -5750,7 +5781,7 @@ body { background: #0d1117; }
                 <div class="uc-detail-grid uc-detail-grid--media">
                   <div class="uc-detail-copy">
                     <ol class="uc-tight-list uc-numbered-list">
-                      <li><strong>Native:</strong> start with <strong>Draft orders</strong> for quote â order handoff; <strong>reserve inventory</strong> and <strong>lock pricing</strong> while stakeholders align.</li>
+                      <li><strong>Native:</strong> start with <strong>Draft orders</strong> for quote → order handoff; <strong>reserve inventory</strong> and <strong>lock pricing</strong> while stakeholders align.</li>
                       <li><strong>Apps:</strong> common accelerators alongside bespoke rules/approvals.</li>
                       <li><strong>Your custom quoting solution</strong></li>
                     </ol>
@@ -5775,7 +5806,7 @@ body { background: #0d1117; }
                   </div>
                 </div>
                 <div class="uc-detail-footnote-corner">
-                  <strong>CRM / CPQ:</strong> possible â treat as <strong>high-risk</strong>.
+                  <strong>CRM / CPQ:</strong> possible — treat as <strong>high-risk</strong>.
                 </div>
               </div>
 
@@ -5794,7 +5825,7 @@ body { background: #0d1117; }
                           <li><strong>Payment per fulfilment</strong> function + <strong>due on fulfilment</strong> payment terms</li>
                         </ul>
                       </li>
-                      <li><strong>Apps:</strong> no strong 3rd-party option for seasonal preorders today â most preorder apps target <strong>backorders</strong> or <strong>D2C</strong>.</li>
+                      <li><strong>Apps:</strong> no strong 3rd-party option for seasonal preorders today — most preorder apps target <strong>backorders</strong> or <strong>D2C</strong>.</li>
                       <li><strong>Your custom solution</strong></li>
                     </ol>
                   </div>
@@ -5812,7 +5843,7 @@ body { background: #0d1117; }
                   <div class="uc-detail-copy">
                     <ol class="uc-tight-list uc-numbered-list">
                       <li><strong>Native:</strong> sales rep manually creates <strong>draft orders</strong> through the backend on behalf of the buyer.</li>
-                      <li><strong>Apps:</strong> <strong>B2B Order Agent</strong> â currently the only viable 3rd-party option.</li>
+                      <li><strong>Apps:</strong> <strong>B2B Order Agent</strong> — currently the only viable 3rd-party option.</li>
                       <li><strong>Your custom solution</strong></li>
                     </ol>
                   </div>
@@ -5826,13 +5857,13 @@ body { background: #0d1117; }
             </div>
           </div>
 
-          <p class="footnote s-reveal">Build for <strong>merchant success</strong> â <a href="https://annafy2024.github.io/partner-resource-hub/" target="_blank" rel="noopener">Partner Resource Hub</a></p>
+          <p class="footnote s-reveal">Build for <strong>merchant success</strong> — <a href="https://annafy2024.github.io/partner-resource-hub/" target="_blank" rel="noopener">Partner Resource Hub</a></p>
 
           <div class="presenter-notes-store" hidden>
             <h4>Possible lane (say on mic)</h4>
-            <p>Beyond base B2B: <strong>apps, Functions, integrations, UI extensions</strong> â still <strong>repeatable shapes</strong> you can scope with confidence. Harder than base B2B, but <strong>known build patterns</strong>; help merchants buy the right scope.</p>
-            <p><strong>Arrow flow:</strong> one <strong>overview</strong> beat, then for <strong>each</strong> use case: <strong>title-only</strong> (sub-slide) â <strong>deep dive</strong> â then straight to the <strong>next</strong> title-only slide (no full-list checklist step in between).</p>
-            <p><strong>Next slide:</strong> <strong>Where we still need better solutions</strong> â frame risk early; optional deeper talk there.</p>
+            <p>Beyond base B2B: <strong>apps, Functions, integrations, UI extensions</strong> — still <strong>repeatable shapes</strong> you can scope with confidence. Harder than base B2B, but <strong>known build patterns</strong>; help merchants buy the right scope.</p>
+            <p><strong>Arrow flow:</strong> one <strong>overview</strong> beat, then for <strong>each</strong> use case: <strong>title-only</strong> (sub-slide) → <strong>deep dive</strong> — then straight to the <strong>next</strong> title-only slide (no full-list checklist step in between).</p>
+            <p><strong>Next slide:</strong> <strong>Where we still need better solutions</strong> — frame risk early; optional deeper talk there.</p>
           </div>
         </div>
       </section>
@@ -5857,7 +5888,7 @@ body { background: #0d1117; }
             <article class="uc-gap-card">
               <span class="uc-gap-card-num" aria-hidden="true">1</span>
               <h4>B2B subscriptions</h4>
-              <p>Contract terms, net invoicing, and reorders donât map neatly to consumer-style selling plans; apps and ops models vary in maturity.</p>
+              <p>Contract terms, net invoicing, and reorders don’t map neatly to consumer-style selling plans; apps and ops models vary in maturity.</p>
             </article>
             <article class="uc-gap-card">
               <span class="uc-gap-card-num" aria-hidden="true">2</span>
@@ -5870,9 +5901,9 @@ body { background: #0d1117; }
 
           <div class="presenter-notes-store" hidden>
             <h4>Gap lane (say on mic)</h4>
-            <p><strong>Flow:</strong> Use this as a <strong>separate beat</strong> after the âpossible with customisationâ slide â less visual load on the prior screen.</p>
-            <p>Still worth <strong>customisation</strong>, but <strong>no widely proven out-of-the-box story</strong> today â expect trade-offs, workarounds, or ERP-led flows.</p>
-            <p>Some partners are building accelerators; position <strong>creative solutioning</strong> with explicit risks â not as âShopify canât,â but as âhereâs how we de-risk scope.â</p>
+            <p><strong>Flow:</strong> Use this as a <strong>separate beat</strong> after the “possible with customisation” slide — less visual load on the prior screen.</p>
+            <p>Still worth <strong>customisation</strong>, but <strong>no widely proven out-of-the-box story</strong> today — expect trade-offs, workarounds, or ERP-led flows.</p>
+            <p>Some partners are building accelerators; position <strong>creative solutioning</strong> with explicit risks — not as “Shopify can’t,” but as “here’s how we de-risk scope.”</p>
           </div>
         </div>
       </section>
@@ -5885,10 +5916,10 @@ body { background: #0d1117; }
           <span class="tag s-reveal">Product roadmap</span>
           <h2 class="s-reveal">Where B2B investment is heading</h2>
           <div class="s-hero-line s-reveal"></div>
-          <div class="entry-changelog s-reveal" role="region" aria-label="B2B roadmap â changelog style">
-            <p class="cl-kicker">Directional only â not a commitment</p>
+          <div class="entry-changelog s-reveal" role="region" aria-label="B2B roadmap — changelog style">
+            <p class="cl-kicker">Directional only — not a commitment</p>
             <p class="cl-desc" style="margin-bottom: 0.75rem">
-              Weâre hearing <strong>more product investment from Q3</strong>, with <strong>preorders / pre-bookings</strong> especially top-of-mind for the B2B team (complex seasonal and allocation workflows partners keep hitting).
+              We’re hearing <strong>more product investment from Q3</strong>, with <strong>preorders / pre-bookings</strong> especially top-of-mind for the B2B team (complex seasonal and allocation workflows partners keep hitting).
             </p>
             <div class="cl-section">
               <p class="cl-section-title">Signals</p>
@@ -5897,7 +5928,7 @@ body { background: #0d1117; }
                 <div class="cl-track"><span class="cl-dot" aria-hidden="true"></span></div>
                 <div class="cl-main">
                   <h3 class="cl-title">B2B features across plans</h3>
-                  <p class="cl-desc">Expanding B2B availability beyond Plus dramatically grows the pool of merchants your practice can serve with native B2B (companies, catalogs, checkout rules) instead of âPlus-onlyâ qualification gates.</p>
+                  <p class="cl-desc">Expanding B2B availability beyond Plus dramatically grows the pool of merchants your practice can serve with native B2B (companies, catalogs, checkout rules) instead of “Plus-only” qualification gates.</p>
                   <div class="cl-meta">
                     <span class="cl-pill cl-pill--live">Live</span>
                     <span class="cl-cat">Plans</span>
@@ -5921,7 +5952,7 @@ body { background: #0d1117; }
                 <div class="cl-track"><span class="cl-dot" aria-hidden="true"></span></div>
                 <div class="cl-main">
                   <h3 class="cl-title">Payment requests per fulfillment</h3>
-                  <p class="cl-desc">Request payment per shipment for orders with mixed lead times (pre-orders, custom work, split fulfillments) â buyers pay via Customer Accounts or emailed links, all tracked in admin.</p>
+                  <p class="cl-desc">Request payment per shipment for orders with mixed lead times (pre-orders, custom work, split fulfillments) — buyers pay via Customer Accounts or emailed links, all tracked in admin.</p>
                   <div class="cl-meta">
                     <span class="cl-pill cl-pill--live">Live</span>
                     <span class="cl-cat">Payments</span>
@@ -5933,7 +5964,7 @@ body { background: #0d1117; }
                 <div class="cl-track"><span class="cl-dot" aria-hidden="true"></span></div>
                 <div class="cl-main">
                   <h3 class="cl-title">Cart and checkout validation: billing address + PO number targets</h3>
-                  <p class="cl-desc">Validate billing addresses and PO numbers directly in Cart and Checkout Validation Functions â enforce rules like blocked countries or required POs without client-side UI hacks.</p>
+                  <p class="cl-desc">Validate billing addresses and PO numbers directly in Cart and Checkout Validation Functions — enforce rules like blocked countries or required POs without client-side UI hacks.</p>
                   <div class="cl-meta">
                     <span class="cl-pill cl-pill--live">Live</span>
                     <span class="cl-cat">Functions</span>
@@ -5969,7 +6000,7 @@ body { background: #0d1117; }
                 <div class="cl-track"><span class="cl-dot" aria-hidden="true"></span></div>
                 <div class="cl-main">
                   <h3 class="cl-title">New Flow action: charge vaulted payment methods</h3>
-                  <p class="cl-desc">Automation-friendly way to capture payment on approved orders where the card is already on file (think replenishment, telesales-assisted flows, âcharge when readyâ operations).</p>
+                  <p class="cl-desc">Automation-friendly way to capture payment on approved orders where the card is already on file (think replenishment, telesales-assisted flows, “charge when ready” operations).</p>
                   <div class="cl-meta">
                     <span class="cl-pill cl-pill--coming">Coming</span>
                     <span class="cl-cat">Flow</span>
@@ -5978,16 +6009,16 @@ body { background: #0d1117; }
               </div>
             </div>
             <p class="cl-desc" style="margin-top: 0.85rem; margin-bottom: 0; font-size: 0.72rem; line-height: 1.45; color: var(--cl-muted)">
-              Pair with the ICP and competitive story in-room: roadmap signals answer âwhatâs different now vs 12â18 months ago?â for experienced partners â still no promises on dates; use Vault / Editions for anything customer-facing.
+              Pair with the ICP and competitive story in-room: roadmap signals answer “what’s different now vs 12–18 months ago?” for experienced partners — still no promises on dates; use Vault / Editions for anything customer-facing.
             </p>
           </div>
           <div class="presenter-notes-store" hidden>
             <h4>Framing</h4>
-            <p>This slide is the âdelta + ammoâ beat before the commerce-network story. It answers experienced partners who already know B2B 101 and want <strong>why this quarter is different</strong> plus <strong>credible product velocity</strong>.</p>
+            <p>This slide is the “delta + ammo” beat before the commerce-network story. It answers experienced partners who already know B2B 101 and want <strong>why this quarter is different</strong> plus <strong>credible product velocity</strong>.</p>
             <h4>Preorder / Q3 note</h4>
-            <p>Keep language directional (âweâre hearingâ, âtop of mindâ) â avoid locking a public date unless you have a shipped Editions reference.</p>
+            <p>Keep language directional (“we’re hearing”, “top of mind”) — avoid locking a public date unless you have a shipped Editions reference.</p>
             <h4>Competitive tie-in (optional)</h4>
-            <p>Connect âB2B on more plansâ + âlegal entities in one storeâ to <strong>wider addressable market</strong> for the partner â not just feature parity arguments against other platforms.</p>
+            <p>Connect “B2B on more plans” + “legal entities in one store” to <strong>wider addressable market</strong> for the partner — not just feature parity arguments against other platforms.</p>
           </div>
         </div>
       </section>
@@ -6006,7 +6037,7 @@ body { background: #0d1117; }
               <h1 class="fn-hero-title s-reveal">
                 <span class="fn-hero-line">B2B as a network</span>
               </h1>
-              <p id="futureNetworkLead" class="fn-lead s-reveal">When <strong>orders</strong>, <strong>buyer data</strong>, and <strong>relationships</strong> stay on Shopify, the hub merchant and downstream buyer orgs can compound â beyond email and spreadsheets alone.</p>
+              <p id="futureNetworkLead" class="fn-lead s-reveal">When <strong>orders</strong>, <strong>buyer data</strong>, and <strong>relationships</strong> stay on Shopify, the hub merchant and downstream buyer orgs can compound — beyond email and spreadsheets alone.</p>
               <div class="fn-divider s-reveal" aria-hidden="true"></div>
               <ul class="fn-checklist" aria-label="Why the network matters">
                 <li class="s-reveal"><span class="fn-checklist-body"><strong>B2B Merchant acts as a Hub</strong> to foster new Shopify B2B Prospects in their ecosystem.</span></li>
@@ -6020,7 +6051,7 @@ body { background: #0d1117; }
             </div>
             <div class="fn-viz-col s-reveal">
               <div class="fn-viz-card">
-                <p class="fn-viz-label">Merchant hub â buyer orgs â their buyers (animated)</p>
+                <p class="fn-viz-label">Merchant hub → buyer orgs → their buyers (animated)</p>
                 <figure class="hub-spoke-viz hub-spoke-viz--herowide" id="hubSpokeViz" role="img" aria-label="B2B merchant at center on Shopify; five buyer organisation nodes on spokes; each buyer connects to smaller nodes representing their downstream B2B buyers; dashed links suggest orders and data on platform.">
                 <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <defs>
@@ -6038,7 +6069,7 @@ body { background: #0d1117; }
                   </defs>
                   <!-- Field: compounding surface -->
                   <ellipse cx="240" cy="140" rx="132" ry="108" fill="none" stroke="rgba(47,223,74,0.14)" stroke-width="1.25" stroke-dasharray="6 8" opacity="0.9" />
-                  <!-- Spokes + flow ticks (lines drawn hub-edge â buyer) -->
+                  <!-- Spokes + flow ticks (lines drawn hub-edge → buyer) -->
                   <g class="hub-spoke-arm" data-spoke="0">
                     <line x1="240" y1="98" x2="240" y2="36" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="5 6" fill="none" />
                     <circle cx="240" cy="62" r="2.2" fill="#2fdf4a" opacity="0.85" />
@@ -6054,12 +6085,12 @@ body { background: #0d1117; }
                       <g class="hub-sub-node hub-live-pulse" style="animation-delay: 0s" transform="translate(214,8)">
                         <circle r="6.5" fill="#141a22" stroke="rgba(47,223,74,0.48)" stroke-width="1.15" />
                         <text y="2.2" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="5" font-weight="700" fill="#e8eef6">DC</text>
-                        <title>Their buyer â distribution / ops</title>
+                        <title>Their buyer — distribution / ops</title>
                       </g>
                       <g class="hub-sub-node hub-live-pulse" style="animation-delay: 0.55s" transform="translate(266,8)">
                         <circle r="6.5" fill="#141a22" stroke="rgba(47,223,74,0.48)" stroke-width="1.15" />
                         <text y="2.2" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="5" font-weight="700" fill="#e8eef6">Site</text>
-                        <title>Their buyer â branch / store</title>
+                        <title>Their buyer — branch / store</title>
                       </g>
                     </g>
                   </g>
@@ -6077,12 +6108,12 @@ body { background: #0d1117; }
                       <g class="hub-sub-node hub-live-pulse" style="animation-delay: 0.15s" transform="translate(374,44)">
                         <circle r="6.5" fill="#141a22" stroke="rgba(47,223,74,0.48)" stroke-width="1.15" />
                         <text y="2.2" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="4.8" font-weight="700" fill="#e8eef6">Plant</text>
-                        <title>Their buyer â plant / subsidiary</title>
+                        <title>Their buyer — plant / subsidiary</title>
                       </g>
                       <g class="hub-sub-node hub-live-pulse" style="animation-delay: 0.65s" transform="translate(328,48)">
                         <circle r="6.5" fill="#141a22" stroke="rgba(47,223,74,0.48)" stroke-width="1.15" />
                         <text y="2.2" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="4.8" font-weight="700" fill="#e8eef6">Subs</text>
-                        <title>Their buyer â subsidiary</title>
+                        <title>Their buyer — subsidiary</title>
                       </g>
                     </g>
                   </g>
@@ -6100,12 +6131,12 @@ body { background: #0d1117; }
                       <g class="hub-sub-node hub-live-pulse" style="animation-delay: 0.3s" transform="translate(358,250)">
                         <circle r="6.5" fill="#141a22" stroke="rgba(47,223,74,0.48)" stroke-width="1.15" />
                         <text y="2.2" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="4.8" font-weight="700" fill="#e8eef6">AP</text>
-                        <title>Their buyer â AP / finance entity</title>
+                        <title>Their buyer — AP / finance entity</title>
                       </g>
                       <g class="hub-sub-node hub-live-pulse" style="animation-delay: 0.8s" transform="translate(306,250)">
                         <circle r="6.5" fill="#141a22" stroke="rgba(47,223,74,0.48)" stroke-width="1.15" />
                         <text y="2.2" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="4.8" font-weight="700" fill="#e8eef6">BU</text>
-                        <title>Their buyer â business unit</title>
+                        <title>Their buyer — business unit</title>
                       </g>
                     </g>
                   </g>
@@ -6123,12 +6154,12 @@ body { background: #0d1117; }
                       <g class="hub-sub-node hub-live-pulse" style="animation-delay: 0.22s" transform="translate(120,250)">
                         <circle r="6.5" fill="#141a22" stroke="rgba(47,223,74,0.48)" stroke-width="1.15" />
                         <text y="2.2" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="4.8" font-weight="700" fill="#e8eef6">SKU</text>
-                        <title>Their buyer â range / SKU owner</title>
+                        <title>Their buyer — range / SKU owner</title>
                       </g>
                       <g class="hub-sub-node hub-live-pulse" style="animation-delay: 0.72s" transform="translate(172,250)">
                         <circle r="6.5" fill="#141a22" stroke="rgba(47,223,74,0.48)" stroke-width="1.15" />
                         <text y="2.2" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="4.8" font-weight="700" fill="#e8eef6">DC</text>
-                        <title>Their buyer â DC / fulfilment</title>
+                        <title>Their buyer — DC / fulfilment</title>
                       </g>
                     </g>
                   </g>
@@ -6146,12 +6177,12 @@ body { background: #0d1117; }
                       <g class="hub-sub-node hub-live-pulse" style="animation-delay: 0.08s" transform="translate(98,42)">
                         <circle r="6.5" fill="#141a22" stroke="rgba(47,223,74,0.48)" stroke-width="1.15" />
                         <text y="2.2" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="4.8" font-weight="700" fill="#e8eef6">IdP</text>
-                        <title>Their buyer â identity / IdP</title>
+                        <title>Their buyer — identity / IdP</title>
                       </g>
                       <g class="hub-sub-node hub-live-pulse" style="animation-delay: 0.58s" transform="translate(126,44)">
                         <circle r="6.5" fill="#141a22" stroke="rgba(47,223,74,0.48)" stroke-width="1.15" />
                         <text y="2.2" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="4.8" font-weight="700" fill="#e8eef6">App</text>
-                        <title>Their buyer â app / contractor access</title>
+                        <title>Their buyer — app / contractor access</title>
                       </g>
                     </g>
                   </g>
@@ -6161,7 +6192,7 @@ body { background: #0d1117; }
                     <text x="240" y="148" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="7.5" font-weight="700" fill="rgba(10,12,14,0.9)">B2B merchant</text>
                     <text x="240" y="160" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="6.2" font-weight="600" fill="rgba(10,12,14,0.72)">Shopify</text>
                   </g>
-                  <text x="240" y="278" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="7.5" font-weight="600" fill="rgba(255,255,255,0.38)">Orders Â· data Â· relationships â on-platform â compounding</text>
+                  <text x="240" y="278" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="7.5" font-weight="600" fill="rgba(255,255,255,0.38)">Orders · data · relationships — on-platform → compounding</text>
                 </svg>
               </figure>
               <div class="fn-mental-model s-reveal" role="note">
@@ -6172,16 +6203,16 @@ body { background: #0d1117; }
           </div>
           <div class="presenter-notes-store" hidden>
             <h4>Commerce network (say on mic)</h4>
-            <p><strong>The commerce network</strong> is the unlock: relationships between B2B merchants and downstream buyers compound when those interactions run on Shopify â not only âa portal,â but <strong>orders, data, and repeat behaviour</strong> on the same surface.</p>
-            <p><strong>Investment in B2B</strong> is real: B2B in <strong>core</strong> widens surface area and builds toward <strong>network effects</strong> between brands and buyers (wholesale today â potential sellers / operators tomorrow).</p>
+            <p><strong>The commerce network</strong> is the unlock: relationships between B2B merchants and downstream buyers compound when those interactions run on Shopify — not only “a portal,” but <strong>orders, data, and repeat behaviour</strong> on the same surface.</p>
+            <p><strong>Investment in B2B</strong> is real: B2B in <strong>core</strong> widens surface area and builds toward <strong>network effects</strong> between brands and buyers (wholesale today → potential sellers / operators tomorrow).</p>
             <h4>Commitment signal</h4>
-            <p><strong>B2B in core</strong> means <strong>more</strong> eyes on B2B â not fewer. That structural shift is one of the clearest signals that Shopify is serious about B2B as durable growth â alongside unified checkout, multi-merchant commerce, and open commerce protocols.</p>
+            <p><strong>B2B in core</strong> means <strong>more</strong> eyes on B2B — not fewer. That structural shift is one of the clearest signals that Shopify is serious about B2B as durable growth — alongside unified checkout, multi-merchant commerce, and open commerce protocols.</p>
             <h4>Diagram cues</h4>
-            <p>Use the <strong>hub â buyer</strong> spokes to name real roles you see on deals (wholesale, replenishment, terms, catalog, SSO). The dashed ring is the âeverything connects backâ story â <strong>map from order + network data</strong> to tooling and a repeatable motion.</p>
-            <p>On the diagram: <strong>center = B2B merchant</strong> on Shopify; <strong>ring = buyer orgs</strong>; <strong>small outer nodes = B2BâB2B</strong> (each buyerâs downstream buyers). Rotating captions + pulsing micro-nodes are intentional â âaliveâ while you narrate.</p>
-            <p><strong>Mental model callout:</strong> Replace <strong>X</strong> on-slide with your credible number or range for the audience (or say âmanyâ live and edit the HTML later).</p>
+            <p>Use the <strong>hub → buyer</strong> spokes to name real roles you see on deals (wholesale, replenishment, terms, catalog, SSO). The dashed ring is the “everything connects back” story — <strong>map from order + network data</strong> to tooling and a repeatable motion.</p>
+            <p>On the diagram: <strong>center = B2B merchant</strong> on Shopify; <strong>ring = buyer orgs</strong>; <strong>small outer nodes = B2B→B2B</strong> (each buyer’s downstream buyers). Rotating captions + pulsing micro-nodes are intentional — “alive” while you narrate.</p>
+            <p><strong>Mental model callout:</strong> Replace <strong>X</strong> on-slide with your credible number or range for the audience (or say “many” live and edit the HTML later).</p>
             <h4>Product lens (optional beat)</h4>
-            <p>Product dev mental model: donât chase feature parity alone â <strong>build B2B commerce differently</strong> (network-native, composable, buyer-obsessed).</p>
+            <p>Product dev mental model: don’t chase feature parity alone — <strong>build B2B commerce differently</strong> (network-native, composable, buyer-obsessed).</p>
           </div>
         </div>
       </section>
@@ -6200,7 +6231,7 @@ body { background: #0d1117; }
               </li>
             </ul>
           </div>
-          <p class="subtitle s-reveal close-slide-outro">Thank you â questions?</p>
+          <p class="subtitle s-reveal close-slide-outro">Thank you — questions?</p>
         </div>
       </section>
 </div>
